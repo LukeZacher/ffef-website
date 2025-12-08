@@ -1,0 +1,8 @@
+footer {
+  background: linear-gradient(
+    to right,
+    var(--primary-blue),
+    var(--primary-blue-dark)
+  );
+  padding: 0 0 var(--spacing-xl);
+}

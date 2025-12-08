@@ -1,1 +1,164 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Design Tokens (CSS Variables) */
+:root {
+  /* Brand Colors */
+  --primary-blue: #225499;
+  --primary-blue-light: #1f92d9; // hover states, accents
+  --primary-blue-dark: #092a67; // active states, emphasis
+  --secondary-gold: #ffb500;
+  --secondary-gold-light: #ffd133;
+  --secondary-gold-dark: #f19d2a;
+
+  /* Text Colors */
+  --text-primary: #1a1a1a; // Main body text (dark gray/black)
+  --text-secondary: #4a5568; // Less important text (medium gray)
+  --text-tertiary: #718096; // De-emphasized text (light gray)
+  --text-inverse: #ffffff; // White text for dark backgrounds
+
+  /* Background Colors */
+  --background: #ffffff; // Main background (white)
+  --background-alt: #f7f7f7; // Alternate background (light gray)
+
+  /* Border Colors */
+  --border: #e2e8f0; // Standard borders (light gray)
+
+  /* Semantic / Status Colors */
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --max-width: 1200px;
+
+  /* Typography */
+  --font-primary: "Poppins", sans-serif;
+  --font-size-base: 16px;
+
+  --navbar-height: 38px; // fallback value
+}
+
+/* Base Elements */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--background);
+  padding-top: var(--navbar-height);
+}
+
+/* Typography Defaults */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  color: var(--primary-blue-dark);
+}
+
+a {
+  color: var(--secondary-gold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+button {
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.link-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  display: inline-block;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+  }
+}
+
+.home-section-heading {
+  font-size: 2.75rem;
+}
+
+.text-center {
+  text-align: center;
+}

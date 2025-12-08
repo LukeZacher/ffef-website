@@ -1,0 +1,39 @@
+<section id="footer-contact" class="footer-contact">
+  <div class="container">
+    <h2 class="home-section-heading">Contact Us</h2>
+    <p>
+      Let us know if you have any questions or would like to schedule a free
+      consultation!
+    </p>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="form-input">
+          <label for="name"
+            >Name <span title="This field is required">*</span></label
+          >
+          <input type="text" id="name" formControlName="name" required />
+        </div>
+        <div class="form-input">
+          <label for="email">Email <span>*</span></label>
+          <input type="email" id="email" formControlName="email" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-input">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" formControlName="subject" />
+        </div>
+      </div>
+      <div class="form-input">
+        <label for="message">Message <span>*</span></label>
+        <textarea
+          id="message"
+          formControlName="message"
+          rows="6"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" [disabled]="!contactForm.valid">Send</button>
+    </form>
+  </div>
+</section>

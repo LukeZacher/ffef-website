@@ -1,0 +1,49 @@
+<nav id="navbar" class="navbar">
+  <div class="navbar-container container">
+    <a href="/" class="navbar-logo">
+      <!-- <img src="/logo.svg" alt="Company Name"> -->
+      FFEF
+    </a>
+    <ul class="navbar-links">
+      <li>
+        <a
+          href="#hero"
+          (click)="
+            scrollService.scrollToSection('hero'); $event.preventDefault()
+          "
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="#about-preview"
+          (click)="
+            scrollService.scrollToSection('about-preview');
+            $event.preventDefault()
+          "
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          href="#services-preview"
+          (click)="
+            scrollService.scrollToSection('services-preview');
+            $event.preventDefault()
+          "
+          >Services</a
+        >
+      </li>
+      <li>
+        <a
+          href="#footer-contact"
+          (click)="
+            scrollService.scrollToSection('footer-contact');
+            $event.preventDefault()
+          "
+          >Contact</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
