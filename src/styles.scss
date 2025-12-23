@@ -55,9 +55,12 @@
 
   /* Layout */
   --max-width: 1200px;
+  --max-width-sm: 800px;
 
   /* Typography */
   --font-primary: "Poppins", sans-serif;
+  --font-signature: "Playball", cursive;
+  --font-fancy: "Great Vibes", cursive;
   --font-size-base: 16px;
 
   --navbar-height: 38px; // fallback value
@@ -133,6 +136,20 @@ button {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0;
+
+  @media (max-width: 1200px) {
+    padding: var(--spacing-lg);
+  }
+}
+
+.container-sm {
+  max-width: var(--max-width-sm);
+  margin: 0 auto;
+  padding: 0;
+
+  @media (max-width: 800px) {
+    padding: var(--spacing-md);
+  }
 }
 
 .link-btn {

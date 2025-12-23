@@ -1,7 +1,16 @@
 .services-preview {
-  background-color: var(--background);
+  background: linear-gradient(to right, #e8f2fa, #fef9ed);
+  border-top: 1px solid rgba(34, 84, 153, 0.06);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.04);
   padding: var(--spacing-xl) 0 5rem;
   display: relative;
+
+  .container {
+    @media (max-width: 575px) {
+      margin-left: var(--spacing-sm);
+      margin-right: var(--spacing-sm);
+    }
+  }
 
   h2 {
     text-align: center;
@@ -13,7 +22,7 @@
     font-size: 1.2rem;
 
     &.top-caption {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto var(--spacing-lg);
     }
 
@@ -27,6 +36,10 @@
     display: flex;
     gap: var(--spacing-lg);
     margin-bottom: 4.5rem;
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
 
     ul {
       list-style-position: inside;
@@ -55,7 +68,13 @@
     padding: var(--spacing-lg) 2.5rem;
     border-radius: var(--radius-lg);
     flex: 1;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 6px rgba(241, 157, 42, 0.2),
+      0 8px 16px rgba(0, 0, 0, 0.18);
+    border: 1px solid white;
+
+    @media (max-width: 575px) {
+      padding: var(--spacing-lg) 1.5rem;
+    }
 
     h3 {
       font-size: 1.5rem;

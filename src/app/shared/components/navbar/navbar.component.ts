@@ -1,10 +1,11 @@
 import { Component, ElementRef, inject, HostListener } from '@angular/core';
 import { RouterLink, Scroll } from '@angular/router';
 import { ScrollService } from '../../services/scroll.service';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink],
+  imports: [RouterLink, NgOptimizedImage],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })

@@ -1,8 +1,117 @@
 footer {
-  background: linear-gradient(
-    to right,
-    var(--primary-blue),
-    var(--primary-blue-dark)
-  );
-  padding: 0 0 var(--spacing-xl);
+  background-color: var(--background-alt);
+  padding: 0 0 var(--spacing-md);
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ffef-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+
+      img {
+        height: 60px;
+        margin-right: var(--spacing-md);
+      }
+
+      .ffef-text {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .ffef-slogan {
+        font-family: var(--font-fancy);
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+    }
+
+    .contact-info-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      .contact-info {
+        display: flex;
+        gap: var(--spacing-xl);
+
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        .title {
+          font-size: 0.9rem;
+          color: var(--text-tertiary);
+          margin-bottom: var(--spacing-sm);
+        }
+
+        .phone-email {
+          a {
+            color: var(--primary-blue);
+
+            &:hover {
+              color: var(--primary-blue-light);
+            }
+          }
+        }
+
+        .mark-contact-info {
+          display: flex;
+          align-items: center;
+
+          .mark-portrait {
+            height: 100px;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: var(--radius-sm);
+            margin-right: var(--spacing-md);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: top center;
+            }
+          }
+        }
+      }
+
+      .address {
+        p {
+          text-align: center;
+        }
+      }
+    }
+
+    .social-media-icons-row {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-md);
+
+      a {
+        color: var(--primary-blue);
+
+        &:hover {
+          color: var(--primary-blue-light);
+        }
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    .copyright {
+      color: var(--text-secondary);
+    }
+  }
 }

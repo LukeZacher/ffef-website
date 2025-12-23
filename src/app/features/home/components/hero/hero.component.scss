@@ -1,14 +1,21 @@
 .hero {
-  background-image: linear-gradient(
-    to right,
-    rgba(31, 146, 217, 0.85),
-    rgba(9, 42, 103, 0.85)
-  );
+  background: linear-gradient(
+      to right,
+      rgba(31, 146, 217, 0.75),
+      rgba(9, 42, 103, 0.75)
+    ),
+    url("/assets/images/landing-page/hero-banner.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 6rem var(--spacing-md) 7rem;
   color: var(--text-inverse);
   text-align: center;
+
+  @media (max-width: 575px) {
+    padding-top: 5rem;
+    height: 100vh;
+  }
 
   .hero-content {
     max-width: 800px;
@@ -31,10 +38,18 @@
       flex-wrap: wrap;
       justify-content: center;
 
+      @media (max-width: 575px) {
+        flex-direction: column;
+      }
+
       .btn {
         padding: var(--spacing-md) var(--spacing-lg);
         font-size: 1.2rem;
         border-radius: var(--radius-lg);
+
+        @media (max-width: 575px) {
+          font-size: 1.1rem;
+        }
 
         &:hover {
           color: #333333;

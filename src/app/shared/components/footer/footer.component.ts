@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FooterContactComponent } from './footer-contact/footer-contact.component';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,4 +8,7 @@ import { FooterContactComponent } from './footer-contact/footer-contact.componen
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {}
+export class FooterComponent {
+  scrollService = inject(ScrollService);
+  currentYear: number = new Date().getFullYear();
+}

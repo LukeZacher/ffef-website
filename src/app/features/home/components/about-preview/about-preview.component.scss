@@ -1,20 +1,33 @@
 .about-preview {
-  background-color: var(--background-alt);
-  padding: var(--spacing-xl) var(--spacing-md) 5rem;
+  @media (max-width: 575px) {
+    padding-top: var(--spacing-lg);
+  }
 
-  .content {
+  .top-about-ffef {
+    background-color: var(--background);
+    padding: var(--spacing-xl) 0;
+  }
+
+  .bottom-about-mark {
+    background-color: var(--background-alt);
+    padding: var(--spacing-xl) 0;
+  }
+
+  .top-content {
     display: flex;
     gap: var(--spacing-xl);
     align-items: center;
 
+    @media (max-width: 575px) {
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+
     .img-wrapper {
       flex: 0 0 400px;
 
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: var(--radius-lg);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      @media (max-width: 575px) {
+        flex: 0;
       }
     }
 
@@ -43,14 +56,129 @@
         }
       }
 
-      a {
-        background-color: var(--primary-blue-dark);
-        color: var(--text-inverse);
+      // a {
+      //   background-color: var(--primary-blue-dark);
+      //   color: var(--text-inverse);
 
-        &:hover {
-          background-color: var(--primary-blue);
+      //   &:hover {
+      //     background-color: var(--primary-blue);
+      //   }
+      // }
+    }
+  }
+
+  .bottom-content {
+    .top-mark-header {
+      display: flex;
+      gap: var(--spacing-lg);
+      margin-bottom: 1.5rem;
+      padding: var(--spacing-lg) var(--spacing-lg) 1.25rem;
+      background: linear-gradient(
+        135deg,
+        var(--secondary-gold-light) 0%,
+        #ffffff 50%,
+        #dbeafe 100% /* A very light blue, matches your brand blue family */
+      );
+      border-radius: var(--radius-lg);
+      box-shadow: 0 10px 30px -5px rgba(9, 42, 103, 0.15);
+      border: 1px solid white;
+
+      .mark-img-wrapper {
+        width: 200px;
+      }
+    }
+
+    .mark-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      h3 {
+        font-size: 2.25rem;
+      }
+
+      .mark-summary-text {
+        h5 {
+          font-size: 1.5rem;
+          color: var(--secondary-gold-dark);
+        }
+
+        .mark-title {
+          margin-bottom: var(--spacing-sm);
+          font-size: 1rem;
+          color: var(--text-tertiary);
+        }
+      }
+
+      .mark-contact-info-row {
+        font-size: 1rem;
+        //margin-bottom: var(--spacing-md);
+
+        a {
+          color: var(--text-secondary);
+
+          &:hover {
+            color: var(--text-tertiary);
+          }
+        }
+
+        .divider {
+          color: var(--secondary-gold-dark);
         }
       }
     }
+
+    .mark-bio-text {
+      padding: 2.25rem 3.5rem 2.5rem 3rem;
+      margin: 0 auto;
+      background-color: var(--background);
+      box-shadow: 0 4px 6px rgba(241, 157, 42, 0.2),
+        0 8px 16px rgba(0, 0, 0, 0.18);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0%;
+        right: -5%;
+        width: 300px;
+        height: auto;
+        background-image: url("/assets/images/logos/ffef-gold-logo-icon.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.1;
+        z-index: -1;
+        transform: rotate(-15deg);
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .last-paragraph {
+        margin-bottom: var(--spacing-md);
+      }
+
+      .mark-signature {
+        font-family: var(--font-signature);
+        font-size: 1.75rem;
+        line-height: 1;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }

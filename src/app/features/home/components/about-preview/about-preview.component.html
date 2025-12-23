@@ -1,33 +1,109 @@
 <section id="about-preview" class="about-preview">
-  <div class="container">
-    <div class="content">
-      <div class="img-wrapper">
-        <img
-          ngSrc="/assets/images/hero/about-preview.webp"
-          alt="Mother reading a book with her child"
-          width="1280"
-          height="853"
-          priority
-        />
+  <!-- About FFEF -->
+  <div class="top-about-ffef">
+    <div class="container">
+      <div class="top-content">
+        <div class="img-wrapper">
+          <img
+            ngSrc="/assets/images/landing-page/about-preview.webp"
+            alt="Mother reading a book with her child"
+            width="1280"
+            height="853"
+            priority
+          />
+        </div>
+        <div class="right-content">
+          <div class="text-wrapper">
+            <h2 class="home-section-heading">About Us</h2>
+            <div class="paragraph-text">
+              <p>
+                At <span class="ffef">Fidelity Financial Education First</span>,
+                we function as your consultant and quarterback in implementing
+                family legacy plans, business transitions, and tax-efficient
+                estate strategies.
+              </p>
+              <p>
+                With 45 years of experience in finance and family legacy
+                planning, we get to know you and provide meaningful guidance to
+                help you accomplish what's most important to you.
+              </p>
+            </div>
+          </div>
+          <!-- <a class="link-btn" href="">Learn More</a> -->
+        </div>
       </div>
-      <div class="right-content">
-        <div class="text-wrapper">
-          <h2 class="home-section-heading">About Us</h2>
-          <div class="paragraph-text">
-            <p>
-              At <span class="ffef">Fidelity Financial Education First</span>,
-              we function as your consultant and quarterback in implementing
-              family legacy plans, business transitions, and tax-efficient
-              estate strategies.
-            </p>
-            <p>
-              With 45 years of experience in finance and family legacy planning,
-              we get to know you and provide meaningful guidance to help you
-              accomplish what's most important to you.
-            </p>
+    </div>
+  </div>
+  <!-- About Mark -->
+  <div class="bottom-about-mark">
+    <div class="container-sm">
+      <div class="bottom-content">
+        <div class="top-mark-header">
+          <div class="mark-img-wrapper">
+            <img
+              ngSrc="/assets/images/landing-page/mark-houston-portrait-desk.webp"
+              alt="Mark Houston portrait"
+              width="819"
+              height="784"
+              priority
+            />
+          </div>
+          <div class="mark-text-wrapper">
+            <h3 class="home-section-heading">A Message From Mark</h3>
+            <div class="mark-summary-text">
+              <h5>Mark Houston</h5>
+              <p class="mark-title">President & Chief Educator</p>
+            </div>
+            <div class="mark-contact-info-row">
+              <p>
+                <a
+                  href="#footer-contact"
+                  (click)="
+                    scrollService.scrollToSection('footer-contact');
+                    $event.preventDefault()
+                  "
+                  >mark&#64;ffefirst.com</a
+                >
+                <span class="divider"> | </span>
+                <a href="tel:+14028807008">(402)880-7008</a>
+              </p>
+              <!-- <p class="contact-row"><span></span>markffefirst.com</p>
+                <p class="contact-row"><span></span>(402)880-7008</p> -->
+            </div>
           </div>
         </div>
-        <a class="link-btn" href="">Learn More</a>
+        <div class="mark-bio-text">
+          <p>
+            I have over 45 years of experience in finance, specializing in
+            financial planning, family legacy planning, and other areas of
+            finance, including business consulting, business sale and
+            acquisition, business transition planning, and commercial real
+            estate finance.
+          </p>
+          <p>
+            Throughout my career, I have worked with leading people in the
+            financial field. I have also been a student of cutting-edge
+            self-development material my entire adult life. I love talking to
+            people about how they can further empower themselves through getting
+            to know them better and developing a personal connection.
+          </p>
+          <p>
+            I founded Fidelity Financial Education First to pursue my passion of
+            helping people create a tax-wise family legacy. I aim to have
+            meaningful, engaging conversations with you so that I along with my
+            team of experts can provide positive outcomes for you and empower
+            your life dreams and goals.
+          </p>
+          <p class="last-paragraph">
+            If you have any questions or are interested in talking with me, I
+            can be reached 24/7/365 at markffefirst.com. Feel free to reach out
+            to me and leave a message, and I will get back to you as soon as
+            possible. I would love to schedule a free consultation with you so
+            we can discuss your situation and goals.
+          </p>
+          <p>I hope to hear from you soon,</p>
+          <p class="mark-signature">Mark Houston</p>
+        </div>
       </div>
     </div>
   </div>

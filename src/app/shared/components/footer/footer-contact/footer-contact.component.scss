@@ -1,8 +1,12 @@
 .footer-contact {
-  padding: var(--spacing-xl) 0;
-  //background-color: var(--background-alt);
-
+  padding: var(--spacing-xl) 0 5rem;
+  margin-bottom: 2.5rem;
   text-align: center;
+  background: linear-gradient(
+    to right,
+    var(--primary-blue),
+    var(--primary-blue-dark)
+  );
 
   h2 {
     margin-bottom: 1.5rem;
@@ -25,10 +29,25 @@
       display: flex;
       gap: var(--spacing-md);
       margin-bottom: var(--spacing-md);
+
+      .form-input {
+        width: 50%;
+      }
     }
 
     .form-input {
       flex-grow: 1;
+
+      .label-row {
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: space-between;
+
+        .error-msg {
+          color: var(--error);
+          margin-right: var(--spacing-sm);
+        }
+      }
     }
 
     label {
@@ -57,9 +76,6 @@
       &.error {
         border-color: var(--error);
       }
-    }
-
-    input {
     }
 
     textarea {

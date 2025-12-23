@@ -7,29 +7,71 @@
     </p>
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="row">
+        <!-- Name -->
         <div class="form-input">
-          <label for="name"
-            >Name <span title="This field is required">*</span></label
-          >
-          <input type="text" id="name" formControlName="name" required />
+          <div class="label-row">
+            <label for="name">Name <span title="Required">*</span></label>
+            <span *ngIf="getErrorMessage('name')" class="error-msg">
+              {{ getErrorMessage("name") }}
+            </span>
+          </div>
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            [minlength]="nameLengthValidator.minLength!"
+            [maxlength]="nameLengthValidator.maxLength!"
+            required
+          />
         </div>
+        <!-- Email -->
         <div class="form-input">
-          <label for="email">Email <span>*</span></label>
-          <input type="email" id="email" formControlName="email" required />
+          <div class="label-row">
+            <label for="email">Email <span title="Required">*</span></label>
+            <span *ngIf="getErrorMessage('email')" class="error-msg">{{
+              getErrorMessage("email")
+            }}</span>
+          </div>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            [maxlength]="emailLengthValidator.maxLength!"
+            required
+          />
         </div>
       </div>
       <div class="row">
+        <!-- Subject -->
         <div class="form-input">
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" formControlName="subject" />
+          <div class="label-row">
+            <label for="subject">Subject</label>
+            <span *ngIf="getErrorMessage('subject')" class="error-msg">{{
+              getErrorMessage("subject")
+            }}</span>
+          </div>
+          <input
+            type="text"
+            id="subject"
+            formControlName="subject"
+            [maxlength]="subjectLengthValidator.maxLength!"
+          />
         </div>
       </div>
+      <!-- Message -->
       <div class="form-input">
-        <label for="message">Message <span>*</span></label>
+        <div class="label-row">
+          <label for="message">Message <span title="Required">*</span></label>
+          <span *ngIf="getErrorMessage('message')" class="error-msg">{{
+            getErrorMessage("message")
+          }}</span>
+        </div>
         <textarea
           id="message"
           formControlName="message"
           rows="6"
+          [minlength]="messageLengthValidator.minLength!"
+          [maxlength]="messageLengthValidator.maxLength!"
           required
         ></textarea>
       </div>
